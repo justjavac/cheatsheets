@@ -4,23 +4,23 @@ category: Devops
 layout: 2017/sheet
 ---
 
-## Reference
+## 参考
 {: .-three-column}
 
-### Inheritance
+### 继承
 
 ```
 FROM ruby:2.2.2
 ```
 
-### Variables
+### 变量
 
 ```
 ENV APP_HOME /myapp
 RUN mkdir $APP_HOME
 ```
 
-### Initialization
+### 初始化
 
 ```
 RUN bundle install
@@ -30,21 +30,21 @@ RUN bundle install
 WORKDIR /myapp
 ```
 
-### Onbuild
+### 构建中(Onbuild)
 
 ```bash
 ONBUILD RUN bundle install
 # when used with another file
 ```
 
-### Commands
+### 命令
 
 ```docker
 EXPOSE 5900
 CMD    ["bundle", "exec", "rails", "server"]
 ```
 
-## See also
+## 参考
 {: .-one-column}
 
 - <https://docs.docker.com/engine/reference/builder/>
