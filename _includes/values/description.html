@@ -4,10 +4,10 @@
   elsif page.description
 %}{{ page.description }}{%
   elsif page.intro
-%}One-page guide to {{ page.title }}: usage, examples, and more. {{ page.intro | markdownify | strip_html }}{%
+%}{{ page.title }}的速查表手册：usage, examples, and more. {{ page.intro | markdownify | strip_html }}{%
   elsif page.type == 'article'
-%}The one-page guide to {{ page.title }}: usage, examples, links, snippets, and more.{%
+%}{{ page.title }}的速查表手册: usage, examples, links, snippets, and more.{%
   else
-%}The one-page guide to {{ page.title }}: usage, examples, links, snippets, and more.{%
+%}{{ page.title }}的速查表手册: usage, examples, links, snippets, and more.{%
   endif
 %}
