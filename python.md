@@ -2,7 +2,7 @@
 title: Python
 ---
 
-### Lists
+### 列表
 
     list = []
     list[i:j]  # returns list subset
@@ -40,14 +40,14 @@ title: Python
     dict.get("key")
     dict.setdefault("key", 1)
 
-### Iteration
+### 迭代器
 
     for item in ["a", "b", "c"]:
     for i in range(4):     # 0 to 3
     for i in range(4, 8):  # 4 to 7
     for key, val in dict.items():
 
-### [String](https://docs.python.org/2/library/stdtypes.html#string-methods)
+### [字符串](https://docs.python.org/2/library/stdtypes.html#string-methods)
 
     str[0:4]
     len(str)
@@ -70,12 +70,12 @@ title: Python
 
     str.islower()
 
-### Casting
+### 类型转换
 
     int(str)
     float(str)
 
-### Comprehensions
+### 列表解析
 
     [fn(i) for i in list]            # .map
     map(fn, list)                    # .map, returns iterator
@@ -83,7 +83,7 @@ title: Python
     filter(fn, list)                 # .filter, returns iterator
     [fn(i) for i in list if i > 0]   # .filter.map
 
-### Regex
+### 正则表达式
 
     import re
 
