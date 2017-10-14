@@ -16,6 +16,9 @@
   <meta content='{{ meta_image | escape }}' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
+  <div id="wx_pic" style="margin:0 auto;display:none;">
+    <img src='{{ meta_image | escape }}' />
+  </div>
 {% endif %}
 
 {% if meta_description %}
