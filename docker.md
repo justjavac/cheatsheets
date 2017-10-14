@@ -7,7 +7,7 @@ layout: default-ad
 管理镜像
 -------------
 
-从Dockerfile创建一个 `镜像`:
+从 Dockerfile 创建一个 `镜像`:
 
 ```yml
 docker build [options] .
