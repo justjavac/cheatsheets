@@ -1,7 +1,7 @@
 home:
   title: "开发者速查表"
   tagline: |
-    本<strong>速查表（cheatsheets）</strong>由 <a href='https://ricostacruz.com'>@rstacruz</a> 创建，简体中文由 <a href='http://justjavac.com'>@justjavac</a> 翻译
+    本<strong>速查表（cheatsheets）</strong>由 <a href='https://ricostacruz.com' target='_blank'>@rstacruz</a> 创建，简体中文由 <a href='http://justjavac.com' target='_blank'>@justjavac</a> 翻译
 
 top_nav:
   title: CheatSheets
