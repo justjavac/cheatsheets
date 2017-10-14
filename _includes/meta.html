@@ -77,6 +77,18 @@ gtag('config','{{ site.data.google_analytics.id }}');
 </script>
 {% endif %}
 
+{% if site.data.baidu_tongji.enabled %}
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?{{ site.data.baidu_tongji.id }}";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>  
+{% endif %}
+
 {% if depth %}
   <meta property='page:depth' content='{{depth}}'>
 {% endif %}
