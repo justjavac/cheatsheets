@@ -4,27 +4,27 @@ category: Devops
 layout: default-ad
 ---
 
-Manage images
+管理镜像
 -------------
 
-Create an `image` from a Dockerfile:
+从 Dockerfile 创建一个 `镜像`:
 
 ```yml
 docker build [options] .
   -t "app/container_name"    # name
 ```
 
-Run a command in an `image`:
+在`镜像`中运行一条命令:
 
 ```yml
 docker run [options] IMAGE
   # see `docker create` for options
 ```
 
-Manage containers
+管理容器
 -----------------
 
-Create a `container` from an `image`:
+从一个`镜像`创建一个`容器`:
 
 ```yml
 docker create [options] IMAGE
@@ -46,7 +46,7 @@ $ docker create --name app_redis_1 \
   redis:3.0.2
 ```
 
-Run in a `container`:
+在一个`容器`中运行:
 
 ```yml
 docker exec [options] CONTAINER COMMAND
@@ -60,7 +60,7 @@ $ docker exec app_web_1 tail logs/development.log
 $ docker exec -t -i app_web_1 rails c
 ```
 
-Start/stop a `container`:
+启动/停止一个`容器`:
 
 ```yml
 docker start [options] CONTAINER
@@ -70,7 +70,7 @@ docker start [options] CONTAINER
 docker stop [options] CONTAINER
 ```
 
-Manage `container`s:
+管理`容器`:
 
 ```
 $ docker ps
@@ -78,10 +78,10 @@ $ docker ps -a
 $ docker kill $ID
 ```
 
-Managing
+管理中
 --------
 
-Manage `image`s:
+管理`镜像`:
 
 ```sh
 $ docker images
@@ -92,13 +92,13 @@ $ docker images
 $ docker images -a   # also show intermediate
 ```
 
-Delete `image`s:
+删除`镜像`:
 
 ```yml
 docker rmi b750fe78269d
 ```
 
-Resources
+资源
 ---------
 
  * http://www.docker.io/gettingstarted/
