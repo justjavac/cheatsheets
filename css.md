@@ -9,7 +9,7 @@ weight: -1
 ## Basics
 {: .-three-column}
 
-### Selectors
+### 选择器
 
 ```css
 .class {
@@ -26,7 +26,7 @@ weight: -1
 | `[disabled]` | Attribute |
 | `[role="dialog"]` | Attribute |
 
-### Combinators
+### 关系选择器
 
 | Selector | Description |
 | --- | --- |
@@ -35,7 +35,7 @@ weight: -1
 | `.child + .sibling` | Adjascent sibling |
 | `.child ~ .sibling` | Far sibling |
 
-### Attribute selectors
+### 属性选择器
 
 | Selector | Description |
 | --- | --- |
@@ -45,7 +45,7 @@ weight: -1
 | `[href$=".doc"]` | `$=` Ends in |
 | `[class*="-is-"]` | `*=` Contains |
 
-### Pseudo-classes
+### 伪类选择器
 
 | Selector | Description |
 | --- | --- |
@@ -82,7 +82,7 @@ Fonts
 -----
 {: .-left-reference}
 
-### Properties
+### 属性
 
 | Property | Description |
 | --- | --- |
@@ -99,14 +99,14 @@ Fonts
 | `text-transform:` | `capitalize` `uppercase` `lowercase` |
 {: .-key-values}
 
-### Shorthand
+### 速记
 {: .-prime}
 
 | `font:` | `italic` | `400`  | `14px`   | `/` | `1.5`       | `sans-serif` |
 |         | style    | weight | size (required) |     | line-height | family (required)  |
 {: .-css-breakdown}
 
-### Example
+### 示例
 
 ```css
 font-family: Arial;
@@ -128,7 +128,7 @@ Background
 ----------
 {: .-left-reference}
 
-### Properties
+### 属性
 
 | Property                 | Description                              |
 | ---                      | ---                                      |
@@ -143,14 +143,14 @@ Background
 | `background-attachment:` | `scroll` `fixed` `local`                 |
 {: .-key-values}
 
-### Shorthand
+### 速记
 
 | `background:` | `#ff0` | `url(bg.jpg)` | `left`    | `top`     | `/` | `100px` `auto` | `no-repeat` | `fixed;`   |
 | `background:` | `#abc` | `url(bg.png)` | `center`  | `center`  | `/` | `cover`        | `repeat-x`  | `local; `  |
 |               | color  | image         | positionX | positionY |     | size           | repeat      | attachment |
 {: .-css-breakdown}
 
-### Multiple backgrounds
+### 多背景
 
 ```css
 background:
@@ -163,7 +163,7 @@ Animation
 ---------
 {: .-left-reference}
 
-### Properties
+### 属性
 
 | `animation:` | _(shorthand)_ |
 | `animation-name:` | `<name>` |
@@ -174,13 +174,13 @@ Animation
 | `animation-timing-function:` | `ease` `linear` `ease-in` `ease-out` `ease-in-out` |
 {: .-key-values}
 
-### Shorthand
+### 速记
 
 | `animation:` | `bounce` | `300ms` | `linear` | `100ms` | `infinite` | `alternate-reverse` |
 | | name | duration | timing-function | delay | count | direction |
 {: .-css-breakdown}
 
-### Example
+### 示例
 
 ```css
 animation: bounce 300ms linear 0s infinite normal;
