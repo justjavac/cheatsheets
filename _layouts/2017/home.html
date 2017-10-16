@@ -39,6 +39,8 @@
   </div>
 
   <div class='pages-list'>
+    {% comment %}
+
     {% for page in featured_pages %}
       {% include 2017/pages-list-item.html page=page class='item top-sheet' %}
     {% endfor %}
@@ -53,6 +55,7 @@
       {% endif %}
     {% endfor %}
 
+    {% endcomment %}
 
     {% for category in site.data.categories.names %}
       <h2 class='category item' id='{{ category | downcase | replace: " ", "-" }}' data-js-searchable-header>
