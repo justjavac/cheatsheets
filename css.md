@@ -63,7 +63,7 @@ weight: -1
 | `:nth-of-type(2)` | |
 | --- | --- |
 
-### Pseudo-class variations
+### 伪类扩展
 
 | Selector |
 | --- |
@@ -188,7 +188,7 @@ animation: bounce 300ms linear infinite;
 animation: bounce 300ms linear infinite alternate-reverse;
 ```
 
-### Event
+### 事件
 
 ```js
 .one('webkitAnimationEnd oanimationend msAnimationEnd animationend')
