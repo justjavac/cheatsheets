@@ -17,12 +17,12 @@ intro: |
 }
 ```
 
-### Support
+### 支持
 
  * Firefox 25+ on OSX
  * Webkits (Chrome, Safari, etc)
 
-## References
+## 参考
 {: .-one-column}
 
  * [maxvoltar.com](http://maxvoltar.com/archive/-webkit-font-smoothing)
