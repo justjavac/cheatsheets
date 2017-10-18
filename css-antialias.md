@@ -7,7 +7,7 @@ intro: |
   Here's a 4-line snippet on how to get beautiful, antialiased text with CSS.
 ---
 
-### Antialias
+### 字体平滑
 {: .-prime}
 
 ```css
