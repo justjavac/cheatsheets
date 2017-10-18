@@ -7,7 +7,7 @@ updated: 2017-08-30
 
 ### redux-actions
 
-Create action creators in flux standard action format.
+以 flux 标准的 action 规范，创建一个 `action creators`。
 {: .-setup}
 
 ```js
@@ -20,7 +20,7 @@ increment(42) === { type: 'INCREMENT', payload: 42 }
 ```
 
 ```js
-// Errors are handled for you:
+// 处理错误：
 err = new Error()
 increment(err) === { type: 'INCREMENT', payload: err, error: true }
 ```
@@ -28,9 +28,9 @@ increment(err) === { type: 'INCREMENT', payload: err, error: true }
 [redux-actions](https://www.npmjs.com/package/redux-actions)
 {: .-crosslink}
 
-### flux-standard-ation
+### flux 标准的 action
 
-A standard for flux action objects. An action may have an `error`, `payload` and `meta` and nothing else.
+flux action 对象的标准。一个 action 除了可能包含 `error`，`payload` 或者 `meta`，没有别的。
 {: .-setup}
 
 ```js
@@ -43,7 +43,7 @@ A standard for flux action objects. An action may have an `error`, `payload` and
 
 ### redux-multi
 
-Dispatch multiple actions in one action creator.
+在一个 `action creator` 中分发多个 `actions`。
 {: .-setup}
 
 ```js
@@ -57,7 +57,9 @@ store.dispatch([
 {: .-crosslink}
 
 ### reduce-reducers
-Combines reducers (like *combineReducers()*), but without namespacing magic.
+
+合并 reducers，像 `combineReducers` 方法，不要使用命名空间。
+
 {: .-setup}
 
 ```js
@@ -74,7 +76,8 @@ re(10, { number: 2 })  //=> 14
 
 ### redux-logger
 
-Logs actions to your console.
+输出 actions 到你的控制台。
+
 {: .-setup}
 
 ```js
@@ -89,7 +92,8 @@ Async
 
 ### redux-promise
 
-Pass promises to actions. Dispatches a flux-standard-action.
+通过结合 promises 去分发一个 flux 标准的 action。
+
 {: .-setup}
 
 ```js
