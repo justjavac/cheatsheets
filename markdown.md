@@ -7,10 +7,10 @@ updated: 2017-09-20
 weight: -1
 ---
 
-## Reference
+## 参考
 {:.-three-column}
 
-### Headers
+### 标题
 
 ```markdown
 # h1
@@ -18,16 +18,16 @@ weight: -1
 ```
 
 ```markdown
-Header 1
+标题 1
 ========
 ```
 
 ```markdown
-Header 2
+标题 2
 --------
 ```
 
-### Emphasis
+### 强调
 
 ```markdown
 *italic*
@@ -43,7 +43,7 @@ __bold__
 `code`
 ```
 
-### Links
+### 链接
 
 ```markdown
 [link](http://google.com)
@@ -58,7 +58,7 @@ __bold__
 <http://google.com>
 ```
 
-### Images
+### 图片
 
 ```markdown
 ![Image alt text](/path/to/img.jpg)
@@ -70,11 +70,11 @@ __bold__
 [img]: http://foo.com/img.jpg
 ```
 
-### Code
+### 代码
 
 ```
-    4 space indent
-    makes a code block
+    4 个空格
+    生成一个代码块
 ```
 
 ~~~markdown
@@ -90,7 +90,7 @@ codeFences.withLanguage()
 ```
 ~~~
 
-### Blockquotes
+### 引用
 
 ```markdown
 > This is
@@ -100,7 +100,7 @@ codeFences.withLanguage()
 > > Blockquote
 ```
 
-### Horizontal line
+### 水平线
 
 ```markdown
 ----
