@@ -81,13 +81,24 @@ re(10, { number: 2 })  //=> 14
 {: .-setup}
 
 ```js
-// Nothing to see here
+// 使用
+import { applyMiddleware, createStore } from 'redux';
+import { createLogger } from 'redux-logger'
+
+const logger = createLogger({
+  // ...options
+});
+
+const store = createStore(
+  reducer,
+  applyMiddleware(logger)
+);
 ```
 
 [redux-logger](https://github.com/evgenyrodionov/redux-logger)
 {: .-crosslink}
 
-Async
+异步
 -----
 
 ### redux-promise
