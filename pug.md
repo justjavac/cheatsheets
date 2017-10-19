@@ -10,7 +10,7 @@ weight: -3
 ## Pug
 {: .-three-column}
 
-### Basic document
+### 基础文档
 {: .-prime}
 
 ```jade
@@ -23,7 +23,7 @@ html(lang='en')
   - javascript()
 ```
 
-### Elements
+### 元素
 
 ```jade
 div
@@ -49,7 +49,7 @@ div.class1.class2
 h1.header
 ```
 
-### Attributes
+### 属性
 
 ```jade
 input(type='text' name='q' autofocus)
@@ -62,7 +62,7 @@ body(class=authenticated ? 'authed' : 'anon')
 
 See: [Attributes](https://pugjs.org/language/attributes.html)
 
-### Comments
+### 注释
 
 ```jade
 // This comment will appear in the HTML
@@ -80,7 +80,7 @@ See: [Attributes](https://pugjs.org/language/attributes.html)
 
 See: [Comments](https://pugjs.org/language/attributes.html)
 
-### Iteration
+### 迭代
 
 ```jade
 ul
@@ -88,7 +88,7 @@ ul
     li= user
 ```
 
-### Layouts
+### 布局
 
 ```jade
 //- page.pug
@@ -138,7 +138,7 @@ script.
 ```
 {: data-line="1"}
 
-### Conditionals
+### 条件判断
 
 ```jade
 if authenticated
