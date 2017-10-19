@@ -2,25 +2,56 @@
 title: Emacs
 ---
 
-### Movements
+### 移动光标
 
-   ^n ^p    # up/down
-   ^f ^b    # left/right
+   ^p    # 上
+   ^n    # 下
+   ^b    # 左
+   ^f    # 右
+   
 
-   ^v Mv    # up/down page
+   ^v    # 向后移动一屏
+   Mv    # 向前移动一屏
+   ^l    # 重绘屏幕，并将光标所在行置于屏幕的中央
 
-   ^a ^e    # begin/end of line
-   Ma Me    # begin/end of sentence
 
-### Basic
+   ^a    # 光标移至行首
+   ^e    # 光标移至行尾
+   Mf    # 光标移至下一个单词
+   Mb    # 光标移至上一个单词
+   Ma    # 光标移至句首
+   Me    # 光标移至句尾
+   M<    # 光标移至文件开头
+   M>    # 光标移至文件末尾
 
-   ^x ^f    # find file
-   ^x ^s    # save file
+### 基本操作
 
-### Command line
+   Mw       # 复制
+   ^y       # 粘贴
+   ^w       # 剪切
+   ^/       # 撤销
+   ^x u     # 撤销
+   ^k       # 删除至行尾
+   Mg g     # 跳转至某一行
+   ^x o     # 切换窗口焦点
+   ^x 1     # 将当前窗口铺满
+   ^x 2     # 将窗口一分为二（上下分）
+   ^x 3     # 将窗口一分为二（左右分）
+   ^x ^f    # 查找文件
+   ^x d     # 打开目录
+   ^x ^s    # 保存文件
+   ^g       # 取消当前键入的命令
+   ^x ^b    # 打开 Buffer
+   ^x b     # 切回上一个 Buffer
+   ^x ^c    # 退出 Emacs
 
-   Mx
+### 命令行
 
-### Packages
+   Mx       # 进入 Emacs 命令行
+   Mx shell # 进入 shell 终端
+   Mp       # 在 shell 终端中，上一条命令
+   Mn       # 在 shell 终端中，下一条命令
+
+### 安装软件包
 
    Mx package-install RET evil RET
