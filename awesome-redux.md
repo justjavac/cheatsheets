@@ -117,7 +117,7 @@ increment(Promise.resolve(42))
 
 ### redux-promises
 
-Sorta like that, too. Works by letting you pass *thunks* (functions) to `dispatch()`. Also has 'idle checking'.
+通过让你分发（dispatch） `thunks` 函数来工作，也有“空闲检查”。
 {: .-setup}
 
 ```js
@@ -132,16 +132,17 @@ store.dispatch(fetchData('/posts'))
 ```
 
 ```js
-// That's actually shorthand for:
+// 实际上是：
 fetchData('/posts')(store.dispatch)
 ```
 
 [redux-promises](https://www.npmjs.com/package/redux-promises)
 {: .-crosslink}
 
-### redux-effects
+### redux 副作用
 
-Pass side effects declaratively to keep your actions pure.
+以声明的方式传递副作用，保持 action 的纯净。
+
 {: .-setup}
 
 ```js
@@ -162,7 +163,7 @@ Pass side effects declaratively to keep your actions pure.
 
 ### redux-thunk
 
-Pass "thunks" to as actions. Extremely similar to redux-promises, but has support for getState.
+以 thunks 作为 actions。非常类似于 `redux-promises`，但是支持 `getState`。
 {: .-setup}
 
 ```js
@@ -177,13 +178,14 @@ store.dispatch(fetchData('/posts'))
 ```
 
 ```js
-// That's actually shorthand for:
+// 实际的简写:
 fetchData('/posts')(store.dispatch, store.getState)
 ```
 
 ```js
-// Optional: since fetchData returns a promise, it can be chained
-// for server-side rendering
+
+// 可选：因为 `fetchData` 返回了一个 promises，所以它可以链式写。
+// 用于服务器渲染：
 store.dispatch(fetchPosts()).then(() => {
   ReactDOMServer.renderToString(<MyApp store={store} />)
 })
