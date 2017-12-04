@@ -9,7 +9,7 @@ intro: |
   A quick overview of new JavaScript features in ES2015, ES2016, ES2017 and beyond.
 ---
 
-### Block scoping
+### 块级作用域
 
 #### Let
 
@@ -29,18 +29,18 @@ function fn () {
 const a = 1
 ```
 
-`let` is the new `var`. Constants work just like `let`, but can't be reassigned.
+`let` 类似于 `var`. `Const` 的性质类似于 `let`, 但是声明后值不能改变.
 See: [Let and const](http://babeljs.io/docs/learn-es2015/#let-const)
 
-### Backtick strings
+### 反引号字符串
 
-#### Interpolation
+#### 字符串插值
 
 ```js
 var message = `Hello ${name}`
 ```
 
-#### Multiline strings
+#### 多行字符串
 
 ```js
 var str = `
@@ -49,21 +49,21 @@ world
 `
 ```
 
-Templates and multiline strings.
-See: [Template strings](http://babeljs.io/docs/learn-es2015/#template-strings)
+模板字符串和多行字符串。
+查看: [模板字符串](http://babeljs.io/docs/learn-es2015/#template-strings)
 
-### Binary and octal literals
+### 二进制和八进制文字
 
 ```js
 let bin = 0b1010010
 let oct = 0o755
 ```
 
-See: [Binary and octal literals](http://babeljs.io/docs/learn-es2015/#binary-and-octal-literals)
+查看: [二进制和八进制文字](http://babeljs.io/docs/learn-es2015/#binary-and-octal-literals)
 
-### New methods
+### 新方法
 
-#### New string methods
+#### 新的字符串方法
 
 ```js
 "hello".repeat(3)
@@ -71,9 +71,9 @@ See: [Binary and octal literals](http://babeljs.io/docs/learn-es2015/#binary-and
 "\u1E9B\u0323".normalize("NFC")
 ```
 
-See: [New methods](http://babeljs.io/docs/learn-es2015/#math-number-string-object-apis)
+查看: [New methods](http://babeljs.io/docs/learn-es2015/#math-number-string-object-apis)
 
-### Classes
+### Classes类
 
 ```js
 class Circle extends Shape {
@@ -97,7 +97,7 @@ class Circle extends Shape {
 ```
 {: data-line="1"}
 
-#### Calling superclass methods
+#### 调用父级方法
 
 ```js
   expand (n) {
@@ -106,7 +106,7 @@ class Circle extends Shape {
 ```
 {: data-line="2"}
 
-#### Static methods
+#### 静态方法
 
 ```js
   static createFromDiameter(diameter) {
@@ -116,8 +116,8 @@ class Circle extends Shape {
 ```
 {: data-line="1"}
 
-Syntactic sugar for prototypes.
-See: [Classes](http://babeljs.io/docs/learn-es2015/#classes)
+原型的语法糖.
+查看: [Classes](http://babeljs.io/docs/learn-es2015/#classes)
 
 ### Exponent operator
 
@@ -131,7 +131,7 @@ Promises
 --------
 {: .-three-column}
 
-### Making promises
+### 创建 promises
 
 ```js
 new Promise((resolve, reject) => {
@@ -141,10 +141,10 @@ new Promise((resolve, reject) => {
 ```
 {: data-line="1"}
 
-For asynchronous programming.
-See: [Promises](http://babeljs.io/docs/learn-es2015/#promises)
+用于异步编程.
+查看: [Promises](http://babeljs.io/docs/learn-es2015/#promises)
 
-### Using promises
+### 使用 promises
 
 ```js
 promise
@@ -153,7 +153,7 @@ promise
 ```
 {: data-line="2,3"}
 
-### Promise functions
+### Promise 方法
 
 ```js
 Promise.all(···)
@@ -166,7 +166,7 @@ Destructuring
 -------------
 {: .-three-column}
 
-### Destructuring assignment
+### 解构参数
 
 #### Arrays
 
@@ -184,11 +184,11 @@ let {title, author} = {
 ```
 {: data-line="1"}
 
-Supports for matching arrays and objects.
-See: [Destructuring](http://babeljs.io/docs/learn-es2015/#destructuring)
+支持数组和对象.
+查看: [Destructuring](http://babeljs.io/docs/learn-es2015/#destructuring)
 
 
-### Function arguments
+### 函数参数
 
 ```js
 function greet({ name, greeting }) {
@@ -201,7 +201,7 @@ function greet({ name, greeting }) {
 greet({ name: 'Larry', greeting: 'Ahoy' })
 ```
 
-### Loops
+### 循环
 
 ```js
 for (let {title, artist} in songs) {
@@ -210,12 +210,12 @@ for (let {title, artist} in songs) {
 ```
 {: data-line="1"}
 
-The assignment expressions work in loops, loo.
+赋值表达式也能运行在循环中.
 
 Functions
 ---------
 
-### Function arguments
+### 函数参数
 
 #### Default arguments
 
@@ -247,7 +247,7 @@ fn(...[1, 2, 3])
 Default, rest, spread.
 See: [Function arguments](http://babeljs.io/docs/learn-es2015/#default-rest-spread)
 
-### Fat arrows
+### 箭头函数
 
 #### Fat arrows
 
@@ -258,7 +258,7 @@ setTimeout(() => {
 ```
 {: data-line="1"}
 
-#### With arguments
+#### 传参
 
 ```js
 readFile('text.txt', (err, data) => {
@@ -267,7 +267,7 @@ readFile('text.txt', (err, data) => {
 ```
 {: data-line="1"}
 
-#### Implicit return
+#### 隐形返回
 ```js
 numbers.map(n => n * 2)
 // No curly braces = implicit return
@@ -275,22 +275,22 @@ numbers.map(n => n * 2)
 ```
 {: data-line="1"}
 
-Like functions but with `this` preserved.
-See: [Fat arrows](http://babeljs.io/docs/learn-es2015/#arrows)
+与 functions 类似但是 `this` 被隐式创建并且不可变.
+查看: [Fat arrows](http://babeljs.io/docs/learn-es2015/#arrows)
 
 Objects
 -------
 
-### Shorthand syntax
+### 语法速记
 
 ```js
 module.exports = { hello, bye }
 // Same as: module.exports = { hello: hello, bye: bye }
 ```
 
-See: [Object literal enhancements](http://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
+查看: [对象字面量增强](http://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
 
-### Methods
+### 方法
 
 ```js
 const App = {
@@ -302,9 +302,9 @@ const App = {
 ```
 {: data-line="2"}
 
-See: [Object literal enhancements](http://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
+查看: [对象字面量增强](http://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
 
-### Getters and setters
+### Getters 和 setters
 
 ```js
 const App = {
@@ -318,9 +318,9 @@ const App = {
 ```
 {: data-line="2,5"}
 
-See: [Object literal enhancements](http://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
+查看: [对象字面量增强](http://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
 
-### Computed property names
+### 计算属性名称
 
 ```js
 let event = 'click'
@@ -331,7 +331,7 @@ let handlers = {
 ```
 {: data-line="3"}
 
-See: [Object literal enhancements](http://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
+查看: [对象字面量增强](http://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
 
 Modules
 -------
@@ -363,8 +363,8 @@ import { indentSpaces as indent } from 'helpers'
 // aka: indent = require('···').indentSpaces
 ```
 
-`import` is the new `require()`.
-See: [Module imports](http://babeljs.io/docs/learn-es2015/#modules)
+`import` 类似于 `require()`.
+查看: [Module imports](http://babeljs.io/docs/learn-es2015/#modules)
 
 ### Exports
 
@@ -383,8 +383,8 @@ export const pi = 3.14159
 // aka: module.exports.pi = ···
 ```
 
-`export` is the new `module.exports`.
-See: [Module exports](http://babeljs.io/docs/learn-es2015/#modules)
+`export` 类似于 `module.exports`.
+查看: [Module exports](http://babeljs.io/docs/learn-es2015/#modules)
 
 Generators
 ----------
@@ -405,10 +405,9 @@ gen.next().value  // → 1
 gen.next().value  // → 2
 ```
 
-It's complicated.
-See: [Generators](http://babeljs.io/docs/learn-es2015/#generators)
+查看: [Generators](http://babeljs.io/docs/learn-es2015/#generators)
 
-### For..of iteration
+### For..of 循环
 
 ```js
 for (let i of iterable) {
@@ -416,5 +415,5 @@ for (let i of iterable) {
 }
 ```
 
-For iterating through generators and arrays.
-See: [For..of iteration](http://babeljs.io/docs/learn-es2015/#iterators-for-of)
+用于遍历 generators 函数和数组.
+查看: [For..of iteration](http://babeljs.io/docs/learn-es2015/#iterators-for-of)

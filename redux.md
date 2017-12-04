@@ -6,7 +6,7 @@ updated: 2017-08-30
 weight: -3
 ---
 
-### Creating a store
+### 创建 store
 
 ```js
 import { createStore } from 'redux'
@@ -32,14 +32,13 @@ let store = createStore(counter)
 ```
 
 ```js
-// Optional - you can pass `initialState` as a second arg
+// 可选 - 您可以将 `initialState` 作为第二个参数传递
 let store = createStore(counter, { value: 0 })
 ```
 
-A store is made from a reducer function, which takes the current `state`, and
-returns a new `state` depending on the `action` it was given.
+一个 store 由一个 reducer 函数创建，它保存当前的 `state`，并根据给出的 `action` 返回一个新的 `state`。
 
-### Using a store
+### 使用 store
 
 ```js
 let store = createStore(counter)
@@ -47,22 +46,22 @@ let store = createStore(counter)
 {: .-setup}
 
 ```js
-// Dispatches an action; this changes the state
+// 分发一个 action; 去改变 state
 store.dispatch({ type: 'INCREMENT' })
 store.dispatch({ type: 'DECREMENT' })
 ```
 
 ```js
-// Gets the current state
+// 得到当前的 state
 store.getState()
 ```
 
 ```js
-// Listens for changes
+// 监听 state 的改变
 store.subscribe(() => { ... })
 ```
 
-Dispatch actions to change the store's state.
+分发 `actions` 去改变 `store` 的 `state`。
 
 ## React Redux
 
@@ -80,9 +79,9 @@ React.render(
   </Provider>, mountNode)
 ```
 
-The `<Provider>` component makes the store available in your React components. You need this so you can use `connect()`.
+`<Provider>` 组件可以让你的 `React` 组件可获取 `store`。如需可以使用 `connect` 注入。
 
-### Mapping state
+### 映射状态
 
 ```js
 import { connect } from 'react-redux'
@@ -90,7 +89,7 @@ import { connect } from 'react-redux'
 {: .-setup}
 
 ```js
-// A functional React component
+// 函数式 React 组件
 function App ({ messasge, onMessageClick }) {
   return (
     <div onClick={() => onMessageClick('hello')}>
@@ -101,13 +100,14 @@ function App ({ messasge, onMessageClick }) {
 ```
 
 ```js
-// Maps `state` to `props`:
-// These will be added as props to the component.
+// 映射 `state` 到 `props`：
+// 这些将作为 props 添加到组件中。
 function mapState (state) {
   return { message: state.message }
 }
 
-// Maps `dispatch` to `props`:
+// 映射 `dispatch` 到 `props`:
+// 同样组件可以通过 props 获取。
 function mapDispatch (dispatch) {
   return {
     onMessageClick (message) {
@@ -116,11 +116,11 @@ function mapDispatch (dispatch) {
   }
 }
 
-// Connect them:
+// 注入到 App
 export default connect(mapState, mapDispatch)(App)
 ```
 
-### Shorthand
+### 简写
 
 ```js
 export default connect(
@@ -135,38 +135,36 @@ export default connect(
 )(App)
 ```
 
-Same as above, but shorter.
+较短的写法，效果相同。
 
-## Middleware
+## 中间件
 
-### Signature
+### 签名
 
 ```js
-// noop middleware
+// 无操作中间件
 const logger = store => dispatch => action { dispatch(action) }
 ```
 
 ```js
 const logger = store => {
-  // This function runs on createStore().
-  // It returns a decorator for dispatch().
+  // 此函数在 createStore() 中运行
+  // 返回一个 dispatch() 的装饰器
 
   return dispatch => {
-    // Runs on createStore(), too.
-    // It returns a new dispatch() function
+    // 同样运行在 createStore() 中
+    // 返回一个新的 dispatch() 函数
 
     return action => {
-      // Runs on every dispatch()
-    }
+      // 运行每一个 dispatch()
+    }
   }
 }
 ```
 
-Middlewares are simply decorators for `dispatch()` to allow you to take
-different kinds of actions, and to perform different tasks when receiving
-actions.
+中间件是 `dispatch()` 的简单装饰器，可以让你获取不同类型的 `actions`，并在接收 `actions` 时执行不同的任务。
 
-### Applying middleware
+### 应用中间件
 
 ```js
 const enhancer = applyMiddleware(logger, thunk, ...)
@@ -177,7 +175,7 @@ const store = createStore(reducer, {}, enhancer)
 ```
 {: data-line="1"}
 
-## References
+## 参考
 {: .-one-column}
 
 * [Redux](https://www.npmjs.com/package/redux) _(npmjs.com)_
