@@ -4,7 +4,7 @@ category: tools
 layout: 2017/sheet
 ads: false
 tags: [Featured]
-updated: 2017-10-10
+updated: 2017-12-04
 weight: -10
 description: |
   正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串
